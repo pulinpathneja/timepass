@@ -26,13 +26,41 @@
                     </div>
                     <div class="collapse navbar-collapse" id="navbar-ex-collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="active">
-                                <a href="#">Sign up</a>
-                            </li>
-                            <li class="active">
-                                <a href="#">Login</a>
-                            </li>
-                        </ul>
+<li class="dropdown active">
+                                                <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign Up <strong class="caret"></strong></a>
+                                                <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+                                                        <form method="post" action="login" accept-charset="UTF-8">
+<input style="margin-bottom: 15px;" type="text" placeholder="First Name" id="username" name="username">
+<input style="margin-bottom: 15px;" type="text" placeholder="Last Name" id="username" name="username">
+<input style="margin-bottom: 15px;" type="text" placeholder="Mobile" id="username" name="username">
+                                                                <input style="margin-bottom: 15px;" type="text" placeholder="Username" id="username" name="username">
+                                                                <input style="margin-bottom: 15px;" type="password" placeholder="Password" id="password" name="password">
+                                                                <input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="remember-me" value="1">
+                                                                <label class="string optional" for="user_remember_me"> Remember me</label>
+                                                                <input class="btn btn-primary btn-block" type="submit" id="sign-in" value="Sign In">
+                                                                <label style="text-align:center;margin-top:5px">or</label>
+                                <input class="btn btn-primary btn-block" type="button" id="sign-in-google" value="Sign In with Google">
+                                                                <input class="btn btn-primary btn-block" type="button" id="sign-in-twitter" value="Sign In with Twitter">
+                                                        </form>
+                                                </div>
+                                        </li>                        
+<li class="divider-vertical"></li>
+                                        <li class="dropdown active">
+                                                <a class="dropdown-toggle" href="#" data-toggle="dropdown">Log In <strong class="caret"></strong></a>
+                                                <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+                                                        <form method="post" action="wishlist.html" accept-charset="UTF-8">
+                                                                <input style="margin-bottom: 15px;" type="text" placeholder="Username" id="username" name="username">
+                                                                <input style="margin-bottom: 15px;" type="password" placeholder="Password" id="password" name="password">
+                                                                <input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="remember-me" value="1">
+                                                                <label class="string optional" for="user_remember_me"> Remember me</label>
+                                                                <input class="btn btn-primary btn-block" type="submit" id="sign-in" value="Sign In">
+                                                                <label style="text-align:center;margin-top:5px">or</label>
+                                <input class="btn btn-primary btn-block" type="button" id="sign-in-google" value="Sign In with Google">
+                                                                <input class="btn btn-primary btn-block" type="button" id="sign-in-twitter" value="Sign In with Twitter">
+                                                        </form>
+                                                </div>
+                                        </li>
+			</ul>
                     </div>
                 </div>
             </div>
@@ -43,16 +71,16 @@
                         <p class="text-inverse"></p>
                         <br>
                         <br>
-                        <a class="btn btn-danger btn-lg">How it works<br></a>
+                        <a href="#about" class="btn btn-danger btn-lg page-scroll">How it works<br></a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="section">
+        <section class="bg-primary" id="about">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png"
+                        <img src="http://74211.com/wallpaper/picture_thumb/Free-Wallpaper-Background-Baby-Girl-Holding-Dandelion-Making-a-Wish.jpg"
                         class="img-responsive">
                     </div>
                     <div class="col-md-6">
@@ -69,7 +97,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <div class="section">
             <div class="container">
                 <div class="row">
@@ -92,11 +120,11 @@
                 </div>
             </div>
         </div>
-        <div class="section">
+        <section class="bg-primary">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png"
+                        <img src="http://www.drivingschool-4u.co.uk/resources/_wsb_507x273_Give+someone+a+gift+from+Driving+school+-+4++u.jpg"
                         class="img-responsive">
                     </div>
                     <div class="col-md-6">
@@ -104,6 +132,24 @@
                             <br>
                         </h1>
                         <h3>Make A wish</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                            ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+                            dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
+                            nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                            Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
+                            enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum
+                            felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
+                            elementum semper nisi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+<div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-primary">Top Wishes</h1>
+                        <h3>A subtitle</h3>
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
                             ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
                             dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
