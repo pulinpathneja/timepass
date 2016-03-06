@@ -11,6 +11,14 @@ module.exports = {
 			console.log(user);
 			return user;
 		});
-	}	
+	},
+	friends: function(req,res){
+		console.log(req);
+		var graph = require('fbgraph');
+		graph.get("/me/friends", function(err, user) {
+  				console.log(user); // { image: true, location: "http://profile.ak.fb..." }
+				res.send(JSON.stringify(user));
+		});
+	}
 };
 

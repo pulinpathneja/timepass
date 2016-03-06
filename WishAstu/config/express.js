@@ -5,9 +5,13 @@ var passport = require('passport')
     , TwitterStrategy = require('passport-twitter').Strategy;
 
 
+var Facebook = require('facebook-node-sdk');
+var graph = require('fbgraph');
+
 var verifyHandler = function(token, tokenSecret, profile, done) {
   process.nextTick(function() {
-
+    sails.log.verbose("Here come the token");
+    sails.log.verbose(token);    	
     User.findOne({uid: profile.id}, function(err, user) {
       if (user) {
         return done(null, user);
@@ -35,6 +39,8 @@ var verifyHandler = function(token, tokenSecret, profile, done) {
       }
     });
   });
+  graph.setAccessToken(token);
+  graph.setAppSecret("c017df32a73ede0aa412fd97d69b134b");
 };
 
 passport.serializeUser(function(user, done) {
@@ -66,7 +72,8 @@ module.exports.http = {
     passport.use(new FacebookStrategy({
       clientID: "919739298123428",
       clientSecret: "c017df32a73ede0aa412fd97d69b134b",
-      callbackURL: "http://beta.wishgenie.in:1337/auth/facebook/callback"
+      callbackURL: "http://beta.wishgenie.in:1337/auth/facebook/callback",
+      enableProof: true
     }, verifyHandler));
 
     passport.use(new GoogleStrategy({
@@ -83,6 +90,7 @@ module.exports.http = {
 
     app.use(passport.initialize());
     app.use(passport.session());
+    app.use(Facebook.middleware({ appId: '919739298123428', secret: 'c017df32a73ede0aa412fd97d69b134b' }));
   }
 
   // Completely override Express middleware loading.

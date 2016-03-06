@@ -38,7 +38,7 @@ module.exports = {
   // https://developers.facebook.com/docs/
   // https://developers.facebook.com/docs/reference/login/
   facebook: function(req, res) {
-    passport.authenticate('facebook', { failureRedirect: '/login', scope: ['email'] }, function(err, user) {
+    passport.authenticate('facebook', { failureRedirect: '/login', scope: ['email', 'user_about_me', 'user_birthday', 'user_friends', 'user_events'] }, function(err, user) {
       req.logIn(user, function(err) {
         if (err) {
           console.log(err);

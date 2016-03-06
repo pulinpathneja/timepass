@@ -12,7 +12,8 @@ module.exports = {
         name: 'STRING',
 
         wishes:{
-                collection: 'wish'
+                collection: 'wish',
+		via: 'wishlist'
         },
         user:{
                 model: 'user'

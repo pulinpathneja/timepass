@@ -16,6 +16,9 @@ module.exports = {
 	contributedBy : {
 		collection: 'user'
 		
+	},
+	wishlist: {
+		model: 'wishlists'
 	}
 
   }
