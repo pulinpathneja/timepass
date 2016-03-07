@@ -32,7 +32,7 @@ var verifyHandler = function(token, tokenSecret, profile, done) {
         if (profile.name && profile.name.familyName) {
           data.lastname = profile.name.familyName;
         }
-
+	data.token = token;
         User.create(data, function(err, user) {
           return done(err, user);
         });

@@ -16,6 +16,7 @@ module.exports = {
     email: 'STRING',
     firstname: 'STRING',
     lastname: 'STRING',
+    token: 'STRING',
     lists: {
 		collection: 'wishlists',
 		via:'user'
